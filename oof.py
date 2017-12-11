@@ -9,8 +9,15 @@ ypos = 10
 screen = pygame.display.set_mode((1680, 970))
 screen.fill(white)
 pygame.mouse.set_visible(False)
+x = 0
+y = 0
+
 while screen1 == 0:
     screen = pygame.display.set_mode((1680, 970))
     screen.fill(white)
-    pygame.draw.circle(screen, blue, pygame.mouse.get_pos(), 10)
+    pygame.draw.circle(screen, blue, (x, y), 10)
+    if pygame.KEYDOWN(unicode) == pygame.K_w:
+        y += 5
+    if pygame.KEYDOWN[pygame.K_s]:
+        y -= 5
     pygame.display.update()
